@@ -13,6 +13,8 @@ import ClipLoader from 'react-spinners/ClipLoader';
 // 6. 데이터를 들고 오는 동안 로딩스피너가 돈다.
 
 function App() {
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(true);
@@ -28,8 +30,6 @@ function App() {
     'Busan',
     'Jeju City',
   ];
-
-  const API_KEY = process.env.REACT_APP_API_KEY;
 
   // 도시의 날씨정보 가져오기
   const getWeatherByCity = async () => {

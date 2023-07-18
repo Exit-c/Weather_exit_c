@@ -1,29 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const WeatherBox = ({ weather }) => {
-  const StyledBox = styled.div`
-    width: 500px;
-    color: #333;
-    background-color: #f4fafc;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    ul {
-      padding-left: 20px;
-    }
-    li:first-child {
-      font-size: 25px;
-    }
-    li:nth-child(2) {
-      font-size: 30px;
-    }
-    li:nth-child(4) {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-  `;
+const StyledBox = styled.div`
+  width: 500px;
+  color: #333;
+  background-color: #f4fafc;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  ul {
+    padding-left: 20px;
+  }
+  li:first-child {
+    font-size: 25px;
+  }
+  li:nth-child(2) {
+    font-size: 30px;
+  }
+  li:nth-child(4) {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+`;
 
+const WeatherBox = ({ weather }) => {
   return (
     <StyledBox>
       <ul>
