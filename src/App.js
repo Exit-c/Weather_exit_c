@@ -29,9 +29,11 @@ function App() {
     'Jeju City',
   ];
 
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
   // 도시의 날씨정보 가져오기
   const getWeatherByCity = async () => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c9da3b59022c6813090822f9d2a27bfa&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
     setLoading(true);
     let response = await fetch(url);
     let data = await response.json();
@@ -50,7 +52,7 @@ function App() {
 
   // 현재위치의 날씨정보 가져오기
   const getWeatherByCurrentLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c9da3b59022c6813090822f9d2a27bfa&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
     setLoading(true);
     let response = await fetch(url);
     let data = await response.json();
